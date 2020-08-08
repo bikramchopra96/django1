@@ -19,7 +19,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/boardgames/all", methods=['GET'])
+@app.route("/api/boardgames/all", methods=['GET'])
 def allBoardGames():
     client = pymongo.MongoClient("mongodb+srv://boardgames:boardgames@bdat1004.ashep.gcp.mongodb.net/boardgames?retryWrites=true&w=majority")
     db = client.boardGames
@@ -29,19 +29,6 @@ def allBoardGames():
     for game in games:
         allGames.append(game)
     return jsonify({"allGames" : allGames})
-
-@app.route('/boardgames/', methods=['GET'])
-def getGameByName(name):
-  client = pymongo.MongoClient("mongodb+srv://boardgames:boardgames@bdat1004.ashep.gcp.mongodb.net/boardgames?retryWrites=true&w=majority")
-  db = client.boardGames
-  col = db.boardGames
-  game = col.find_one({"name" : name})
-  if game:
-    output = {{"game": game}}
-  else:
-    output = "No such name"
-  return jsonify({'result' : output})
-
 
 if __name__ == "__main__":
     app.run(debug=True)
