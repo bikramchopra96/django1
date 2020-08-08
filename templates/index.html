@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./static/lib/css//bootstrap.min.css">
+  <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="./static/lib/css/dc.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+
+
+</head>
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">Board Games Analysis Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="row">
+
+          <!-- Age Group Pie --> 
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Games by Age Group
+              </div>
+              <div class="chart-stage">
+                <div id="age-pie-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Age Group Pie --> 
+
+          <!-- Price Bar Chart -->
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Price by Number of Players
+              </div>
+              <div class="chart-stage">
+                <div id="price-bar-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Price Bar Chart -->
+
+          <!-- Popularity Trend -->
+          <div class="col-sm-6">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                Popularity by Playtime
+              </div>
+              <div class="chart-stage">
+                <div id="popularity-trend"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Popularity Trend -->
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+    <hr>
+    <p class="small text-muted">Built with &#9829; by Leah, Priyansh & Monil</a></p>
+
+  </div>
+
+  <script src="./static/lib/js/jquery.min.js"></script>
+  <script src="./static/lib/js/bootstrap.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="./static/lib/js/d3.js"></script>
+  <script src="./static/lib/js/dc.js"></script>
+  <script src="./static/lib/js/queue.js"></script>
+
+
+  <script src="./static/lib/js/keen.min.js"></script>
+  <script src='./static/js/graphs.js' type='text/javascript'></script>
+</body>
+</html>
